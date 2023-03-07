@@ -1,0 +1,30 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/script.rpy", line 11: Line is indented, but the preceding screen statement does not expect a block. Please check this line's indentation.
+    add 'images/imeyama.jpg'
+    ^
+
+File "game/script.rpy", line 15: Line is indented, but the preceding screen statement does not expect a block. Please check this line's indentation.
+    add 'images/hiroki.jpg'
+    ^
+
+File "game/script.rpy", line 19: Line is indented, but the preceding screen statement does not expect a block. Please check this line's indentation.
+    add 'images/kohanashi.jpg'
+    ^
+
+File "game/script.rpy", line 23: Line is indented, but the preceding screen statement does not expect a block. Please check this line's indentation.
+    add 'images/kaiyo.jpg'
+    ^
+
+File "game/script.rpy", line 27: Line is indented, but the preceding screen statement does not expect a block. Please check this line's indentation.
+    add 'images/monimori.jpg'
+    ^
+
+File "game/script.rpy", line 31: Line is indented, but the preceding screen statement does not expect a block. Please check this line's indentation.
+    add 'images/tensei.jpg'
+    ^
+
+Ren'Py Version: Ren'Py 8.0.3.22090809
+Wed Mar  8 01:43:30 2023
