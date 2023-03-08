@@ -9,20 +9,34 @@ screen map_button:
     zorder 12
     if map_mark == 0:
         frame:
-            textbutton "Відкрити мапу":
+            imagebutton auto '/images/map_icon_%s.png' focus_mask(True) align (0.5, 0.5):
                 action SetVariable('map_mark',1),Show('map') 
     else:
         frame:
-            textbutton "Закрити мапу":
-                action SetVariable('map_mark',0),Hide('map')
+            imagebutton auto '/images/map_icon_%s.png'  align (0.5, 0.5):
+                action SetVariable('map_mark',0),Hide('map')  
  
-#Екран мапи
+# Екран мапи
 screen map:
     zorder 11
     modal True
     add '/images/map1.png' align (0.5, 0.5)
 
-    imagebutton auto '/images/map_icon_%s.png' focus_mask(True) align (0.6, 0.5):
+# Іконки переміщення
+    #Тенсей
+    imagebutton auto '/images/map_icon_%s.png' focus_mask(True) align (0.70, 0.73):
+        action NullAction()
+    # Імеяма
+    imagebutton auto '/images/map_icon_%s.png' focus_mask(True) align (0.61, 0.33):
+        action NullAction() 
+    # Коханаши
+    imagebutton auto '/images/map_icon_%s.png' focus_mask(True) align (0.77, 0.16):
+        action NullAction() 
+    # Ліс
+    imagebutton auto '/images/map_icon_%s.png' focus_mask(True) align (0.28, 0.75):
+        action NullAction() 
+    # Моніморі
+    imagebutton auto '/images/map_icon_%s.png' focus_mask(True) align (0.28, 0.25):
         action NullAction() 
 
 

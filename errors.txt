@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 58: Line is indented, but the preceding show screen statement statement does not expect a block. Please check this line's indentation.
-    pause
-    ^
+File "game/script.rpy", line 16: 'action' is not a keyword argument or valid child for the frame statement.
+    action SetVariable('map_mark',0),Hide('map')  
+          ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Wed Mar  8 02:06:50 2023
+Wed Mar  8 20:34:43 2023
