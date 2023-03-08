@@ -1,50 +1,70 @@
-﻿screen map:
+﻿#Екран мапи
+screen map:
     modal True
     add 'images/map.png'
 
 label start:
     "Мапа світу"
-    jump imeyama1
+    jump imeyama
     return
 
-screen imeyama
+
+
+#Опис екранів для лейблів
+
+screen imeyama:
+    modal True
     add 'images/imeyama.jpg'
-    return
+    
 
-screen hiroki
+screen hiroki:
+    modal True
     add 'images/hiroki.jpg'
-    return
+    
 
-screen kohanashi
+screen kohanashi:
+    modal True
     add 'images/kohanashi.jpg'
-    return
+    
 
-screen kaiyo
+screen kaiyo:
+    modal True
     add 'images/kaiyo.jpg'
-    return
+    
 
-screen monimori
+screen monimori:
+    modal True
     add 'images/monimori.jpg'
-    return
+    
 
-screen tensei
+screen tensei:
+    modal True
     add 'images/tensei.jpg'
-    return
+    
 
-label imeyama1:
-    show screen imeyama
+# Лейбли переміщень (не використовувати для прописання історії) лейбли переміщення окремо
+# А лейбли історії окремо
 
-label hiroki1:
-    show screen hiroki
+label imeyama:
+    show screen imeyama with fade
+    pause
 
-label kaiyo1:
-    show screen kaiyo
+label hiroki:
+    show screen hiroki with fade
+    pause
 
-label kohanashi1:
-    show screen kohanashi
+label kaiyo:
+    show screen kaiyo with fade
+    pause
 
-label monimori1:
-    show screen monimori
+label kohanashi:
+    show screen kohanashi with fade
+    pause
 
-label tensei1:
-    show screen tensei
+label monimori:
+    show screen monimori with fade
+    pause
+
+label tensei:
+    show screen tensei with fade
+    pause
