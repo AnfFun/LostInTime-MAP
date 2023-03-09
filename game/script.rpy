@@ -45,7 +45,7 @@ screen map:
 label start:
     "Мапа світу"
     show screen map_button 
-    scene camp with fade
+    scene black with dissolve 
     pause
     return
 
@@ -105,7 +105,7 @@ label imeyama:
     call map_tp
     $ map_mark = 0
     hide screen map
-    show screen imeyama with fade
+    show screen imeyama with dissolve
     window hide
     pause
 
@@ -113,33 +113,33 @@ label hiroki:
     call map_tp
     $ map_mark = 0
     hide screen map
-    show screen hiroki with fade
+    show screen hiroki with dissolve
     pause
 
 label kaiyo:
     call map_tp
     $ map_mark = 0
     hide screen map
-    show screen kaiyo with fade
+    show screen kaiyo with dissolve
     pause
 
 label kohanashi:
     call map_tp
     $ map_mark = 0
     hide screen map
-    show screen kohanashi with fade
+    show screen kohanashi with dissolve
     pause
 
 label monimori:
     call map_tp
     $ map_mark = 0
     hide screen map
-    show screen monimori with fade
+    show screen monimori with dissolve
     pause
 
 label tensei:
     call map_tp
     $ map_mark = 0
     hide screen map
-    show screen tensei with fade
+    show screen tensei with dissolve
     pause
