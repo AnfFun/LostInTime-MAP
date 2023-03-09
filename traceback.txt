@@ -1,7 +1,7 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 81, in script
+  File "game/script.rpy", line 97, in script
     pause
   File "renpy/common/000statements.rpy", line 455, in execute_pause
     renpy.pause()
@@ -9,16 +9,18 @@ While running game code:
     screen map:
   File "game/script.rpy", line 20, in execute
     screen map:
-  File "game/script.rpy", line 25, in execute
-    imagebutton auto '/images/mapIcon.png'
-  File "renpy/common/00defaults.rpy", line 139, in _imagemap_auto_function
-    rv = auto_param % variant
-TypeError: not all arguments converted during string formatting
+  File "game/script.rpy", line 28, in execute
+    imagebutton auto '/images/map_icon_%s.png' focus_mask(True) align (0.70, 0.73):
+  File "game/script.rpy", line 28, in keywords
+    imagebutton auto '/images/map_icon_%s.png' focus_mask(True) align (0.70, 0.73):
+  File "game/script.rpy", line 29, in <module>
+    action Jump (tensei)
+NameError: name 'tensei' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 81, in script
+  File "game/script.rpy", line 97, in script
     pause
   File "D:\renpy-8.0.3-sdk\renpy\ast.py", line 2232, in execute
     self.call("execute")
@@ -54,17 +56,15 @@ Full traceback:
     screen map:
   File "game/script.rpy", line 20, in execute
     screen map:
-  File "game/script.rpy", line 25, in execute
-    imagebutton auto '/images/mapIcon.png'
-  File "D:\renpy-8.0.3-sdk\renpy\ui.py", line 952, in _imagebutton
-    idle = choice(idle, idle_image, "idle", required=True)
-  File "D:\renpy-8.0.3-sdk\renpy\ui.py", line 940, in choice
-    rv = renpy.config.imagemap_auto_function(auto, name)
-  File "renpy/common/00defaults.rpy", line 139, in _imagemap_auto_function
-    rv = auto_param % variant
-TypeError: not all arguments converted during string formatting
+  File "game/script.rpy", line 28, in execute
+    imagebutton auto '/images/map_icon_%s.png' focus_mask(True) align (0.70, 0.73):
+  File "game/script.rpy", line 28, in keywords
+    imagebutton auto '/images/map_icon_%s.png' focus_mask(True) align (0.70, 0.73):
+  File "game/script.rpy", line 29, in <module>
+    action Jump (tensei)
+NameError: name 'tensei' is not defined
 
 Windows-10-10.0.19045 AMD64
 Ren'Py 8.0.3.22090809
 LostInTime MAP 1.0
-Wed Mar  8 04:39:17 2023
+Thu Mar  9 11:48:22 2023

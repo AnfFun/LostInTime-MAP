@@ -20,31 +20,33 @@ screen map_button:
 screen map:
     zorder 11
     modal True
-    add '/images/map1.png' align (0.5, 0.5)
+    add '/images/map.png' align (0.5, 0.5)
 
 # Іконки переміщення
+    
     #Тенсей
     imagebutton auto '/images/map_icon_%s.png' focus_mask(True) align (0.70, 0.73):
-        action NullAction()
+        action Jump ("tensei")
     # Імеяма
     imagebutton auto '/images/map_icon_%s.png' focus_mask(True) align (0.61, 0.33):
-        action NullAction() 
+        action Jump("imeyama")
     # Коханаши
     imagebutton auto '/images/map_icon_%s.png' focus_mask(True) align (0.77, 0.16):
-        action NullAction() 
+        action Jump ("kohanashi")
     # Ліс
     imagebutton auto '/images/map_icon_%s.png' focus_mask(True) align (0.28, 0.75):
-        action NullAction() 
+        action Jump("hiroki")
     # Моніморі
     imagebutton auto '/images/map_icon_%s.png' focus_mask(True) align (0.28, 0.25):
-        action NullAction() 
+        action Jump ("monimori")
 
-
+#   Стартовий Лейбл
 
 label start:
     "Мапа світу"
     show screen map_button 
-    jump imeyama
+    scene camp with fade
+    pause
     return
 
 
@@ -85,32 +87,59 @@ screen tensei:
     zorder 10
     modal True
     add '/images/tensei.jpg'
-    
+
+# Хайдимо скріни аби гра не зупинялась
+
+label map_tp:
+    hide screen imeyama
+    hide screen hiroki
+    hide screen kohanashi
+    hide screen monimori
+    hide screen tensei
+    return
 
 # Лейбли переміщень (не використовувати для прописання історії) лейбли переміщення окремо
 # А лейбли історії окремо
 
 label imeyama:
-    show screen imeyama 
+    call map_tp
+    $ map_mark = 0
+    hide screen map
+    show screen imeyama with fade
     window hide
     pause
 
 label hiroki:
+    call map_tp
+    $ map_mark = 0
+    hide screen map
     show screen hiroki with fade
     pause
 
 label kaiyo:
+    call map_tp
+    $ map_mark = 0
+    hide screen map
     show screen kaiyo with fade
     pause
 
 label kohanashi:
+    call map_tp
+    $ map_mark = 0
+    hide screen map
     show screen kohanashi with fade
     pause
 
 label monimori:
+    call map_tp
+    $ map_mark = 0
+    hide screen map
     show screen monimori with fade
     pause
 
 label tensei:
+    call map_tp
+    $ map_mark = 0
+    hide screen map
     show screen tensei with fade
     pause
