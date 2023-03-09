@@ -1,4 +1,4 @@
-﻿# Кнопка карти 
+# Кнопка карти 
 init:
     $ map_mark = 0
 
@@ -76,69 +76,3 @@ screen tensei:
     zorder 10
     modal True
     add '/images/tensei.jpg'
-
-
-#   Стартовий Лейбл
-
-label start:
-    "Мапа світу"
-    show screen map_button 
-    scene black 
-    pause
-    return
-
-# Хайдимо скріни аби гра не зупинялась
-
-label map_tp:
-    hide screen imeyama
-    hide screen hiroki
-    hide screen kohanashi
-    hide screen monimori
-    hide screen tensei
-    return
-
-# Лейбли переміщень (не використовувати для прописання історії) лейбли переміщення окремо
-# А лейбли історії окремо
-
-label imeyama:
-    call map_tp
-    $ map_mark = 0
-    hide screen map
-    show screen imeyama with dissolve
-    window hide
-    pause
-
-label hiroki:
-    call map_tp
-    $ map_mark = 0
-    hide screen map
-    show screen hiroki with dissolve
-    pause
-
-label kaiyo:
-    call map_tp
-    $ map_mark = 0
-    hide screen map
-    show screen kaiyo with dissolve
-    pause
-
-label kohanashi:
-    call map_tp
-    $ map_mark = 0
-    hide screen map
-    show screen kohanashi with dissolve
-    pause
-
-label monimori:
-    call map_tp
-    $ map_mark = 0
-    hide screen map
-    show screen monimori with dissolve
-    pause
-
-label tensei:
-    call map_tp
-    $ map_mark = 0
-    hide screen map
-    show screen tensei with dissolve
-    pause
